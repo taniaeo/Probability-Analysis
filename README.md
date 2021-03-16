@@ -61,7 +61,7 @@ His2=np.histogram(HCounts,bins=9)[0]
 His3=np.histogram(HCounts,bins=bn2)[0]
 
 #select the bins that have more counts
-# 
+
 if  np.median(His1)== max((np.median(His1),np.median(His2),np.median(His2))):
     bin0=bn
 else:
@@ -69,12 +69,6 @@ else:
         bin0=np.linspace(min(HCounts), max(HCounts),10)
     else:
         bin0=bn2
-
-
-#if np.median(His1) > np.median(His2):
-#    bin0=bn
-#else:
-#    bin0=np.linspace(min(HCounts), max(HCounts),10)
 
 
 ###########labels#######################
@@ -244,7 +238,7 @@ for a in range(0,nmax):
     PLav=[LavH[i]/(LavH[i]+NLavH[i]+PrecH[i]) for i in range(0,len(LavH))]
     PPrec=[PrecH[i]/(LavH[i]+NLavH[i]+PrecH[i]) for i in range(0,len(LavH))]
     PNLav=[NLavH[i]/(LavH[i]+NLavH[i]+PrecH[i]) for i in range(0,len(LavH))]
-#probability to be above threshold*************************************
+#probability to be above threshold
     P1k=[sum(LavH[i:])/(sum(LavH[i:])+sum(NLavH[i:])+sum(PrecH[i:])) for i in range(0,len(NLavH))]#Prob to have phase above threshold
     Pk1=[sum(LavH[i:])/sum(LavH) for i in range(0,len(LavH))]#fraction of days with phase above threshold
     Pk2=[1-(sum(NLavH[i:])+sum(PrecH[i:]))/(sum(NLavH)+sum(PrecH)) for i in range(0,len(LavH))]#fraction of days with no phase above threshold
@@ -269,9 +263,9 @@ MPLav=np.mean(listPLav, axis=0)
 MPPrec=np.mean(listPPrec, axis=0) 
 MPNLav=np.mean(listPNLav, axis=0) 
 
-MPrec=np.mean(listPrec,axis=0)#*****************
-MSens=np.mean(listSens,axis=0)#*****************
-MSpec=np.mean(listSpec,axis=0)#*****************
+MPrec=np.mean(listPrec,axis=0)
+MSens=np.mean(listSens,axis=0)
+MSpec=np.mean(listSpec,axis=0)
 
 
 ###Error of list
@@ -283,8 +277,8 @@ EPLav=np.std(listPLav, axis=0)
 EPPrec=np.std(listPPrec, axis=0) 
 EPNLav=np.std(listPNLav, axis=0) 
 
-EPrec=np.std(listPrec,axis=0)#*****************
-ESens=np.std(listSens,axis=0)#*****************
+EPrec=np.std(listPrec,axis=0)
+ESens=np.std(listSens,axis=0)
 ESpec=np.std(listSpec,axis=0)
 
 
