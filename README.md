@@ -4,3 +4,6 @@ This tool calculates the probability distribution of the monitoring time series 
 It runs on Python and the interface can be visited in the following link
 https://dome.wovodat.org/probability/
 
+It reads a csv file with two columns with heading: Date,MPEnergy
+The format of the date is (month/day/year, i.e 10/24/1993)
+
