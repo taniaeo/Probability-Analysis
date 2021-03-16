@@ -126,7 +126,7 @@ print('Min value in data= '+ str(round(min(HCounts),5)))
 DateEvents = [] #Dates of onset/end for each event 
 ErrDate=[] #uncertainty on the dates (not used in this code yet)
 
-#We ask the user to input the dates of the events when there was lava extrusion (or any other eruptive phase)
+#We ask the user to input the dates of the events when there was lava extrusion (or any other eruptive phase), format 2/14/1994,11/22/1994
 while(True):
     nameInput=input("Onset and End separated by , (to finish write .) ")
 
